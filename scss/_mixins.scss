@@ -1,0 +1,41 @@
+// mixins
+@mixin vcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin bpmin($point) {
+    @if $point == mobile {
+        @media (min-width: $screen-xs) { @content; }
+    }
+    @else if $point == tablet {
+        @media (min-width: $screen-sm) { @content; }
+    }
+    @else if $point == desktop {
+        @media (min-width: $screen-md)  { @content; }
+    } @else {
+        @media (min-width: $point)  { @content; }
+    }
+}
+
+@mixin bp($point) {
+    @if $point == mobile {
+        @media (max-width: $screen-xs) { @content; }
+    }
+    @else if $point == tablet {
+        @media (max-width: $screen-sm) { @content; }
+    }
+    @else if $point == desktop {
+        @media (max-width: $screen-md)  { @content; }
+    } @else {
+        @media (max-width: $point)  { @content; }
+    }
+}
+
+@mixin hoverActions() {
+    &:hover, &:active, &:focus, &:visited {
+        @content;
+    }
+}

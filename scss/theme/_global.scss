@@ -1,0 +1,82 @@
+//global style
+body {
+    min-width: 320px;
+    font-weight: 300;
+    overflow-x: hidden;
+    position: relative;
+    line-height: $line-height-base;
+    -webkit-font-smoothing: antialiased;
+}
+//animation reset on tablets, mobile
+@include bp(desktop) {
+    .animated {
+        transition-property: none !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
+// custom classes
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.va {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+// links
+
+a {
+    transition: all .3s ease-out;
+    &:hover {
+        color: $colorLinkHover;
+    }
+    @include hoverActions {
+        text-decoration: none !important;
+        outline: none !important;
+        cursor: pointer;
+    }
+}
+
+// buttons
+.button {
+    color: #fff;
+    background-color: $brand-primary;
+    border-radius: 25px;
+    text-transform: uppercase;
+    outline: none;
+    text-decoration: none !important;
+    transition: all .3s ease-out;
+    padding: 14px 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-size: 14px;
+    &.big {
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+    &:hover {
+        background-color: $colorButtonHover;
+        color: #fff;
+    }
+}
+
+// sprites
+@mixin mysprites($sprites) {
+    @each $sprite in $sprites {
+        $sprite-name: nth($sprite, 10);
+        .sprite-#{$sprite-name} {
+            @include sprite($sprite);
+        }
+    }
+}
+
+@include mysprites($spritesheet-sprites);
+
+span[class^='sprite-'] {
+    display: inline-block;
+}
+

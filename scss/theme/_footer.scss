@@ -1,0 +1,41 @@
+footer {
+    background-color: #fff;
+    padding: 45px 5%;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        @include clearfix;
+        li {
+            display: inline-block;
+            &:first-child {
+                color: $colorSilverLight;
+                span {
+                    color: $colorSilverDark;
+                }
+            }
+            &:last-child {
+                float: right;
+                a {
+                    color: $colorSilver;
+                    &:hover {
+                        color: $colorLinkHover;
+                    }
+                }
+            }
+        }
+    }
+    @include bp(desktop) {
+        padding: 40px 15%;
+        ul {
+            text-align: center;
+            li {
+                width: 100%;
+                &:last-child {
+                    float: none;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+//Fonts
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,500,700';
+
+// Theme
+
+$fontFamily: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontSizeH1: 54px;
+$fontSizeH2: 24px;
+$fontSizeH3: 16px;
+$fontSizeP: 16px;
+$fontSizeSmall: 12px;
+
+$colorGreen: #9fd533;
+$colorLinkHover: #9fd533;
+$colorButtonHover: #afeb38;
+$colorSilverLight: #999999;
+$colorSilverDark: #333440;
+$colorSilver: #686b6e;
+$colorSilverBorder: #f0f0f0;
+$colorRed: #ff6666;
+
+$spaceGlobal: 15px;
+
+/////////////////////////
+//// Bootstrap
+/////////////////////////
+$brand-primary: $colorGreen;
+$list-group-border: $colorSilverBorder;
+
+//fonts, typo
+$font-family-sans-serif: $fontFamily;
+
+$headings-font-weight: 300;
+
+$font-size-base: $fontSizeP;
+
+$font-size-h1: $fontSizeH1;
+$font-size-h2: $fontSizeH2;
+$font-size-h3: $fontSizeH3;
+
+$line-height-base: 1.6;
+

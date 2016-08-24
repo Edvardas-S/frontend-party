@@ -1,0 +1,23 @@
+{
+  "name": "Edvardas",
+  "version": "1.0.0",
+  "description": "Building required resources for Tesonet test task",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp prod"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "*",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "*",
+    "gulp-watch": "^4.3.8",
+    "gulp.spritesmith": "^6.2.1",
+    "jquery": "2.2.4",
+    "run-sequence": "*",
+    "waypoints": "*"
+  }
+}
